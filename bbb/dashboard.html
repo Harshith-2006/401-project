@@ -1,0 +1,102 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            background-color: #007bff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        header {
+            margin: 20px;
+            text-align: center;
+        }
+        .search-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        #searchInput {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+        #searchInput:focus {
+            border-color: #0056b3;
+            outline: none;
+            box-shadow: 0px 0px 8px rgba(0, 91, 187, 0.5);
+        }
+        button {
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #results {
+            margin-top: 20px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px;
+            background: #f4f4f4;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to the Footballer Search Portal</h1>
+        <p>Find details of your favorite football players</p>
+    </header>
+    
+    <section class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for footballers...">
+        <button onclick="searchPlayer()">Search</button>
+
+    </section>
+
+    <div id="results"></div>
+    
+    <footer>
+        <p>&copy; Footballer Search. All rights reserved.</p>
+    </footer>
+
+    <!-- Connect the JavaScript file -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
